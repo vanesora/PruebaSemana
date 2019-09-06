@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { AuthService } from 'src/providers/auth.service';
 
 @Component({
   selector: 'app-news',
@@ -8,7 +9,10 @@ import { NavController } from '@ionic/angular';
 })
 export class NewsPage implements OnInit {
 
-  constructor(public navCtrl: NavController,) {}
+  constructor(
+    public navCtrl: NavController,
+    public authService: AuthService 
+    ) {}
 
   ngOnInit() {
   }

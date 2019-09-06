@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 //Providers
 import { AuthService } from 'src/providers/auth.service';
@@ -29,13 +29,13 @@ import { ApiService } from 'src/providers/api.service';
     IonicModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireAuthModule, 
     AppRoutingModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     AuthService,
+    AngularFireAuth,
     ApiService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
