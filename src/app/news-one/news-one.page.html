@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Noticia 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="news">
+    id:
+    <span> {{news.id}}
+    </span>
+  </div>
+  <div *ngIf="news">
+    about:
+    <span> {{news.about}}
+    </span>
+  </div>
+  <div *ngIf="news">
+    title:
+    <span> {{news.title}}
+    </span>
+  </div>
+  <div *ngIf="news">
+    summary:
+    <span> {{news.summary}}
+    </span>
+  </div>
+
+</ion-content>
